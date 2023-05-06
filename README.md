@@ -1,5 +1,9 @@
 # 🛒 Ecommerce Webiste
 
+Website is live at https://ecommerce1022.vercel.app
+
+Note: I have only hosted the frontend and sanity for this project backend is not hosted so some features make not work properly.You can clone this git repo and run it locally to see this project working.I have also added some screenshots below of the working website.
+
 ![Home](./assets/home.png)
 
 ## 🐈 Features
