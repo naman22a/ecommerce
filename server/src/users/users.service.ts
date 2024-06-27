@@ -26,7 +26,7 @@ export class UsersService {
     async verify(id: number) {
         await this.prisma.user.update({
             where: { id },
-            data: { isVerfied: true },
+            data: { isVerified: true },
         });
     }
 

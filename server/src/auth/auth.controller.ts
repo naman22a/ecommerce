@@ -117,7 +117,7 @@ export class AuthController {
         }
 
         // check is user is verified
-        if (!user.isVerfied) {
+        if (!user.isVerified) {
             return {
                 accessToken: '',
                 errors: [
