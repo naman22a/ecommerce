@@ -6,6 +6,7 @@ import {
     Post,
     Req,
     Res,
+    UseGuards,
 } from '@nestjs/common';
 import { OkResponse, RefreshTokenPayload } from '../types';
 import {
@@ -24,6 +25,7 @@ import { Request, Response } from 'express';
 import { verify } from 'jsonwebtoken';
 import { ConfigService } from '@nestjs/config';
 import { EnvironmentVariables } from '../config';
+import { AuthGuard } from './auth.guard';
 
 @Controller('auth')
 export class AuthController {
@@ -170,6 +172,7 @@ export class AuthController {
         return { accessToken };
     }
 
+    @UseGuards(AuthGuard)
     @Post('logout')
     logout(@Res({ passthrough: true }) res: Response): OkResponse {
         this.authService.sendRefreshToken(res, '');
