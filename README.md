@@ -66,4 +66,4 @@ Note: I have only hosted the frontend and sanity for this project backend is not
 
 ## 📝 License
 
-[MIT licensed](LICENSE).
+[GPL V3 licensed](LICENSE).

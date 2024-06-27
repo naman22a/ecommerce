@@ -16,7 +16,9 @@ import { AuthGuard } from '../auth/auth.guard';
 import { Request } from 'express';
 import { Item } from '@prisma/client';
 import { OkResponse } from '../types';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('cart')
 @UseGuards(AuthGuard)
 @Controller('cart')
 export class CartController {

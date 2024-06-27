@@ -1,9 +1,9 @@
 {
-  "name": "ecommerce",
+  "name": "ecommerce-cms",
   "private": true,
   "version": "1.0.0",
   "main": "package.json",
-  "license": "UNLICENSED",
+  "license": "GPL-3.0-only",
   "scripts": {
     "dev": "sanity dev",
     "start": "sanity start",
@@ -35,5 +35,10 @@
     "printWidth": 100,
     "bracketSpacing": false,
     "singleQuote": true
+  },
+  "author": {
+    "name": "Naman Arora",
+    "email": "namanarora1022@gmail.com",
+    "url": "https://namanarora.vercel.app"
   }
 }

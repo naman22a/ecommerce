@@ -1,10 +1,9 @@
 {
-    "name": "server",
+    "name": "ecommerce-server",
     "version": "0.0.1",
-    "description": "",
-    "author": "",
+    "description": "ecommerce website",
     "private": true,
-    "license": "UNLICENSED",
+    "license": "GPL-3.0-only",
     "scripts": {
         "build": "nest build",
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -27,6 +26,7 @@
         "@nestjs/config": "^2.3.1",
         "@nestjs/core": "^9.0.0",
         "@nestjs/platform-express": "^9.0.0",
+        "@nestjs/swagger": "^7.3.1",
         "@prisma/client": "^4.13.0",
         "argon2": "^0.30.3",
         "class-transformer": "^0.5.1",
@@ -86,5 +86,10 @@
         ],
         "coverageDirectory": "../coverage",
         "testEnvironment": "node"
+    },
+    "author": {
+        "name": "Naman Arora",
+        "email": "namanarora1022@gmail.com",
+        "url": "https://namanarora.vercel.app"
     }
 }

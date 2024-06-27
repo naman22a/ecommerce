@@ -16,7 +16,9 @@ import { OrdersService } from './orders.service';
 import { CheckoutItem } from '../types';
 import Stripe from 'stripe';
 import { InjectStripe } from 'nestjs-stripe';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('orders')
 @UseGuards(AuthGuard)
 @Controller('orders')
 export class OrdersController {
