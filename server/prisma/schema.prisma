@@ -12,7 +12,7 @@ model User {
     name         String
     email        String  @unique
     password     String
-    isVerfied    Boolean @default(false)
+    isVerified   Boolean @default(false)
     tokenVersion Int     @default(0)
 
     createdAt DateTime @default(now())
@@ -40,18 +40,20 @@ model OrderHistoryItem {
     description String
     price       Int
     qty         Int
-    Order       Order? @relation(fields: [orderId], references: [id])
-    orderId     Int?
+
+    // relations
+    Order   Order? @relation(fields: [orderId], references: [id])
+    orderId Int?
 }
 
 model Order {
-    id          Int                @id @default(autoincrement())
-    items       OrderHistoryItem[]
-    isDelivered Boolean            @default(false)
-    createdAt   DateTime           @default(now())
-    updatedAt   DateTime           @updatedAt
+    id          Int      @id @default(autoincrement())
+    isDelivered Boolean  @default(false)
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
 
     // relations
+    items  OrderHistoryItem[]
     userId Int
-    User   User @relation(fields: [userId], references: [id])
+    User   User               @relation(fields: [userId], references: [id])
 }
