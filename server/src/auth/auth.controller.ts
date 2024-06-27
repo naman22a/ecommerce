@@ -26,7 +26,9 @@ import { verify } from 'jsonwebtoken';
 import { ConfigService } from '@nestjs/config';
 import { EnvironmentVariables } from '../config';
 import { AuthGuard } from './auth.guard';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('auth')
 @Controller('auth')
 export class AuthController {
     constructor(
